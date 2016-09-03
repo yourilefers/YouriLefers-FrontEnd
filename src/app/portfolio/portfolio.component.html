@@ -1,0 +1,44 @@
+<div id="portfolio" track-scroll>
+    <!-- Page content -->
+    <div id="content" class="container">
+        <div class="content">
+            <div class="portfolio-item" *ngFor="let PortfolioItem of PortfolioItems">
+                <div class="portfolio-item-inner">
+                    <!-- Heading -->
+                    <h3 class="margin-bottom">{{ PortfolioItem.title }}</h3>
+
+                    <!-- Carousel -->
+                    <img class="reponsive" [src]="PortfolioItem.image.source" [alt]="PortfolioItem.image.title"
+                         [title]="PortfolioItem.image.title">
+
+                    <!-- Body -->
+                    <div class="body">
+                        <!-- Table information -->
+                        <table class="table key-value-table">
+                            <tr>
+                                <td class="key">Link</td>
+                                <td class="value"><a [href]="PortfolioItem.link" target="_blank">{{ PortfolioItem.link }}</a></td>
+                            </tr>
+                            <tr>
+                                <td class="key">Category</td>
+                                <td class="value">{{ PortfolioItem.category }}</td>
+                            </tr>
+                            <tr>
+                                <td class="key">Tools</td>
+                                <td class="value">{{ PortfolioItem.tools }}</td>
+                            </tr>
+                        </table>
+
+                        <!-- Description -->
+                        <div [innerHtml]="PortfolioItem.body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+        <span class="indicator" *ngFor="let item of PortfolioItems; let i = index" [class.active]="i == _scrolledItem">&nbsp;</span>
+    </div>
+</div>

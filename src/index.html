@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <title>Youri Lefers</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Styles -->
+    <link href="//fonts.googleapis.com/css?family=Muli:300,300i,400,400i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" rel="stylesheet" type="text/css">
+    <link href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="vendor/@angular2-material/core/overlay/overlay.css" rel="stylesheet">
+    <link href="vendor/@angular2-material/core/style/core.css" rel="stylesheet">
+
+    <!-- Important scripts -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <!-- Style for the loading -->
+    <style type="text/css">
+        html, body {
+            font-size: 16px;
+            font-weight: normal;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #2a2a2a;
+        }
+        html, body, h1, h2, h3, h4, h5, h6, div, span, a, p {
+            font-family: 'Muli', sans-serif;
+            font-weight: normal;
+            margin: 0;
+        }
+        html, body, a {
+            color: #ffffff;
+        }
+        h1 {
+            font-size: 45px;
+            font-weight: 100;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        h2 {
+            color: #21C2C4;
+            font-size: 30px;
+            line-height: 1;
+        }
+        h1.optical-illusion {
+            /* Because of the optical illusion and the capital S spacing */
+            margin-right: -2px;
+        }
+
+        /* Text align */
+        .text-right {
+            text-align: right;
+        }
+
+        /* Container */
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Top padding */
+        .top-padding {
+            padding-top: 120px;
+        }
+        .bottom-padding {
+            padding-bottom: 120px;
+        }
+
+        /* Splashscreen (same as home) */
+        #splashscreen,
+        #home {
+            background: url('images/background.png') no-repeat center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        #splashscreen .container,
+        #home .container {
+            padding-top: 100px;
+        }
+
+        /* Media queries */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 85px;
+            }
+            h2 {
+                font-size: 50px;
+            }
+            .container {
+                padding-left: 75px;
+                padding-right: 75px;
+            }
+            h1.optical-illusion {
+                /* Because of the optical illusion and the capital S spacing */
+                margin-right: -4px;
+            }
+        }
+        @media (min-width: 992px) {
+            .container {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        }
+        @media (min-width: 1200px) {
+            h1 {
+                font-size: 127px;
+            }
+            h2 {
+                font-size: 70px;
+            }
+            .container {
+                padding-left: 133px;
+                padding-right: 300px;
+            }
+            h1.optical-illusion {
+                /* Because of the optical illusion and the capital S spacing */
+                margin-right: -8px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!-- The app root -->
+<app-root>
+    <!-- Set content while the app is loading -->
+    <div id="splashscreen" class="top-padding bottom-padding">
+        <div class="container text-right">
+            <h1 class="optical-illusion">Youri Lefers</h1>
+            <h2>Software developer</h2>
+        </div>
+    </div>
+</app-root>
+
+<!-- Main scripts -->
+<script src="vendor/core-js/client/core.js"></script>
+<script src="vendor/reflect-metadata/Reflect.js"></script>
+<script src="vendor/zone.js/dist/zone.js"></script>
+<script src="vendor/systemjs/dist/system-polyfills.js"></script>
+<script src="vendor/systemjs/dist/system.src.js"></script>
+
+<script>
+    System.import('system-config.js').then(function () {
+        System.import('main');
+    }).catch(console.error.bind(console));
+</script>
+
+</body>
+</html>

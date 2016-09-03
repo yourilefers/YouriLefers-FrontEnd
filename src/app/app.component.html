@@ -1,0 +1,59 @@
+<md-sidenav-layout [ngClass]="{opened: sideNavOpen}">
+
+    <!-- Regular page content -->
+    <router-outlet></router-outlet>
+
+    <!-- Sidenav -->
+    <md-sidenav #end align="end">
+        <!-- Navigation list -->
+        <md-nav-list id="navigation-list">
+            <a md-list-item routerLink="home" routerLinkActive="active">Home</a>
+            <a md-list-item routerLink="about" routerLinkActive="active">About</a>
+            <a md-list-item routerLink="portfolio" routerLinkActive="active">Portfolio</a>
+            <a md-list-item routerLink="blog" routerLinkActive="active">Blog</a>
+        </md-nav-list>
+    </md-sidenav>
+
+</md-sidenav-layout>
+
+<!-- Sidenav toggle -->
+<button md-icon-button id="sidenav-toggle" (click)="end.toggle()">
+    <md-icon class="md-32" *ngIf="!sideNavOpen">menu</md-icon>
+    <md-icon class="md-32" *ngIf="sideNavOpen">close</md-icon>
+</button>
+
+<!-- Social links -->
+<ul id="social-links">
+    <li class="clearfix">
+        <a md-raised-button href="/files/cv_en.pdf"><md-icon>check</md-icon></a>
+        <div class="description">
+            <span>Curriculum vitae</span>
+            <div class="spacer"></div>
+        </div>
+    </li>
+    <li class="clearfix">
+        <a md-raised-button href="mailto:info@yourilefers.nl"><md-icon>mail</md-icon></a>
+        <div class="description">
+            <span>info@yourilefers.nl</span>
+            <div class="spacer"></div>
+        </div>
+    </li>
+    <li class="clearfix">
+        <button md-raised-button><md-icon>share</md-icon></button>
+        <div class="description">
+            <a md-raised-button href="https://www.facebook.com/youri.lefers" class="icon-button" title="Facebook">
+                <span class="socicon-facebook"></span>
+            </a>
+            <a md-raised-button href="https://plus.google.com/+YouriLefers" class="icon-button" title="Google Plus">
+                <span class="socicon-googleplus"></span>
+            </a>
+            <a md-raised-button href="https://www.linkedin.com/in/yourilefers" class="icon-button" title="LinkedIn">
+                <span class="socicon-linkedin"></span>
+            </a>
+            <a md-raised-button href="https://github.com/yourilefers" class="icon-button" title="GitHub">
+                <span class="socicon-github"></span>
+            </a>
+            <div class="spacer"></div>
+        </div>
+    </li>
+</ul>

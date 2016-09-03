@@ -1,0 +1,38 @@
+<div id="blog" class="top-padding bottom-padding">
+    <div class="container">
+        <div class="content">
+            <div class="blog-item" *ngIf="BlogPost">
+                <!-- Heading -->
+                <h3 class="margin-bottom">{{ BlogPost.title }}</h3>
+
+                <!-- Image -->
+                <img class="responsive" [src]="BlogPost.image.source" [alt]="BlogPost.image.title"
+                     [title]="BlogPost.image.title">
+
+                <!-- Date -->
+                <div class="date"><span>{{ BlogPost.created }}</span></div>
+
+                <!-- Body -->
+                <div class="body" [innerHTML]="BlogPost.body"></div>
+
+                <!-- Social sharing -->
+                <!--
+                <div class="social-share">
+                    <a md-icon-button href="https://www.facebook.com/youri.lefers" class="icon-button" title="Facebook">
+                        <md-icon fontIcon="socicon-facebook"></md-icon>
+                    </a>
+                    <a md-icon-button href="https://plus.google.com/+YouriLefers" class="icon-button" title="Google Plus">
+                        <md-icon fontIcon="socicon-googleplus"></md-icon>
+                    </a>
+                    <a md-icon-button href="https://www.linkedin.com/in/yourilefers" class="icon-button" title="LinkedIn">
+                        <md-icon fontIcon="socicon-linkedin"></md-icon>
+                    </a>
+                    <a md-icon-button href="https://www.linkedin.com/in/yourilefers" class="icon-button" title="Twitter">
+                        <md-icon fontIcon="socicon-twitter"></md-icon>
+                    </a>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</div>

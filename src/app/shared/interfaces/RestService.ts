@@ -1,6 +1,4 @@
-/**
- * Created by yourilefers on 03-09-16.
- */
+
 export interface RestService<T> {
 
     /**

@@ -1,4 +1,4 @@
-import {Component, OnInit, animate, transition, trigger} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
     moduleId: module.id,

@@ -1,7 +1,6 @@
 import {Component, ViewEncapsulation, ViewChild, OnInit} from '@angular/core';
-import {MdSidenav} from "@angular2-material/sidenav/sidenav";
-import {MdIconRegistry} from "@angular2-material/icon/icon-registry";
-import {Router, NavigationEnd} from "@angular/router";
+import {Router} from "@angular/router";
+import {MdIconRegistry} from "@angular2-material/icon";
 
 @Component({
     moduleId: module.id,
@@ -13,7 +12,7 @@ import {Router, NavigationEnd} from "@angular/router";
 export class AppComponent implements OnInit {
 
     // The sidenav element
-    @ViewChild('end') sidenav: MdSidenav;
+    @ViewChild('end') sidenav: any;
 
     // Whether the sidenav is open or not.
     private sideNavOpen:boolean = false;

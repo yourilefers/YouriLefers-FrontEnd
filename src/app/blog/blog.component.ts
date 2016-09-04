@@ -1,7 +1,5 @@
-import {Component, OnInit, OnDestroy, ElementRef, NgZone} from '@angular/core';
+import {Component, OnInit, OnDestroy, NgZone} from '@angular/core';
 import {BlogPost} from "../shared/entities/BlogPost";
-import {TrackScrollDirective} from "../shared/directives/TrackScroll";
-import {NgClass} from "@angular/common";
 import {BlogService} from "../shared/services/BlogService";
 
 declare var $: any;
@@ -10,8 +8,7 @@ declare var $: any;
     moduleId: module.id,
     selector: 'app-blog',
     templateUrl: 'blog.component.html',
-    styleUrls: ['blog.component.css'],
-    directives: [TrackScrollDirective, NgClass]
+    styleUrls: ['blog.component.css']
 })
 export class BlogComponent implements OnInit, OnDestroy {
 

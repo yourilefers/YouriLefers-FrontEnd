@@ -34,7 +34,7 @@ export class PortfolioComponent implements OnInit, OnDestroy {
             id: 1,
             title: 'GoInCtrl (in development)',
             created: '1 September 2016',
-            image: {title: 'Image title 1', 'source': 'http://placehold.it/922x475'},
+            image: {title: 'Image title 1', 'source': 'images/portfolio/goinctrl.png'},
             body: `
 <p>GoInCtrl is an online application that oil measurement labs use to communicate the results with their customers. 
 GoInCtrl will be used by multiple big labs in the lubricating oil (analysis) industry.</p>

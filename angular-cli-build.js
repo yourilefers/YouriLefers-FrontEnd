@@ -17,7 +17,8 @@ module.exports = function(defaults) {
             'rxjs/**/*.+(js|js.map)',
             '@angular/**/*.+(js|js.map)',
             '@angular2-material/**/*',
-            'jquery/dist/jquery.js'
+            'jquery/dist/jquery.js',
+            'angulartics2/**/*'
         ]
     });
 };

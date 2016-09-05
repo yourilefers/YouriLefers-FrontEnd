@@ -10,6 +10,7 @@
 /** Map relative paths to URLs. */
 const map: any = {
     '@angular2-material': 'vendor/@angular2-material',
+    'angulartics2': 'vendor/angulartics2',
 };
 
 /** User packages configuration. */
@@ -18,6 +19,9 @@ const packages: any = {
         format: 'cjs',
         main: 'core.umd.js'
     },
+
+    // Angular tics
+    "angulartics2": {"defaultExtension": "js"},
 
     // Set the default extension for the root package, because otherwise the demo-app can't
     // be built within the production mode. Due to missing file extensions.

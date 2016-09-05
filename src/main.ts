@@ -20,6 +20,8 @@ import {BlogComponent} from "./app/blog/blog.component";
 import {ItemComponent as BlogItemComponent} from "./app/blog/item/item.component";
 import {BlogService} from "./app/shared/services/BlogService";
 import {MdRippleModule, OverlayModule, PortalModule, RtlModule} from "@angular2-material/core";
+import {Angulartics2} from "angulartics2/index";
+import {Angulartics2GoogleAnalytics} from "angulartics2/src/providers/angulartics2-google-analytics";
 
 @NgModule({
     imports: [
@@ -55,7 +57,11 @@ import {MdRippleModule, OverlayModule, PortalModule, RtlModule} from "@angular2-
     ],
     providers: [
         appRoutingProviders,
-        BlogService
+        BlogService,
+
+        // Analytics
+        Angulartics2,
+        Angulartics2GoogleAnalytics,
     ],
 })
 export class AppModule {

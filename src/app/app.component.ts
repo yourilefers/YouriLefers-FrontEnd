@@ -1,6 +1,8 @@
 import {Component, ViewEncapsulation, ViewChild, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {MdIconRegistry} from "@angular2-material/icon";
+import {Angulartics2} from "angulartics2/index";
+import {Angulartics2GoogleAnalytics} from "angulartics2/src/providers/angulartics2-google-analytics";
 
 @Component({
     moduleId: module.id,
@@ -22,7 +24,12 @@ export class AppComponent implements OnInit {
      * @param _mdIconRegistry
      * @param _router
      */
-    constructor(private _mdIconRegistry: MdIconRegistry, private _router: Router) {
+    constructor(
+        private _mdIconRegistry: MdIconRegistry,
+        private _router: Router,
+        private angulartics2: Angulartics2,
+        private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics
+    ) {
         // Register social icons
         this._mdIconRegistry.registerFontClassAlias('socicon', 'socicon');
 

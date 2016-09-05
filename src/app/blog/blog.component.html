@@ -13,9 +13,10 @@
                     <!-- Date -->
                     <div class="date"><span>{{ BlogPost.created }}</span></div>
 
+                    <!-- Blog item body -->
                     <div class="body">
                         <!-- Description -->
-                        <p>{{ BlogPost.body }}</p>
+                        <div [innerHtml]="BlogPost.body"></div>
 
                         <!-- Read more -->
                         <div class="action-wrapper">

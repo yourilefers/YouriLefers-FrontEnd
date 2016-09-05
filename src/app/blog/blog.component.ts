@@ -16,7 +16,7 @@ export class BlogComponent implements OnInit, OnDestroy {
      * The list of blog posts.
      * @type {Array}
      */
-    private BlogPosts:Array<BlogPost> = [];
+    public BlogPosts:Array<BlogPost> = [];
 
     /**
      * The current item it scrolled to.
@@ -46,7 +46,13 @@ export class BlogComponent implements OnInit, OnDestroy {
 
         // Retrieve blog posts
         this.blogPostService.all()
-            .then(BlogPosts => this.BlogPosts = BlogPosts);
+            .then(BlogPosts => {
+                // Run as ngZone
+                this.ngZone.run(() => {
+                    // Set blog posts
+                    this.BlogPosts = BlogPosts;
+                })
+            });
     }
 
     /**
